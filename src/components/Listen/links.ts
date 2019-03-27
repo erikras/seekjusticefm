@@ -8,7 +8,7 @@ export const links: ListenLinkProps[] = [
   },
   {
     src: 'spotify.png',
-    href: '',
+    href: 'https://open.spotify.com/show/5YMjx8eThZzMsz17Icw7Vz',
     text: 'Spotify',
   },
   {

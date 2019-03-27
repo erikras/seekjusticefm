@@ -77,7 +77,7 @@ export default {
     // generate RSS
     let feed = await buildFeed(
       contents,
-      myURL,
+      'https://seekjusticefm.netlify.com',
       author,
       feedOptions,
       iTunesChannelFields,
