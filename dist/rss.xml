@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:cc="http://web.resource.org/cc/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <channel>
+        <title>Seek Justice</title>
+        <link>https://seekjustice.fm</link>
+        <language>en</language>
+        <description>a weekly deep dive into Criminal Justice with Dennis Schrantz</description>
+        <managingEditor>seekjusticefm@gmail.com (seekjusticefm@gmail.com)</managingEditor>
+        <pubDate>Wed, 27 Mar 2019 16:09:18 GMT</pubDate>
+        <lastBuildDate>Wed, 27 Mar 2019 16:09:18 GMT</lastBuildDate>
+        <docs>https://seekjustice.fm</docs>
+        <generator>https://github.com/sw-yx/react-static-typescript-starter</generator>
+        <itunes:summary>Seek Justice</itunes:summary>
+        <itunes:author>Erik Rasmussen and Dennis Schrantz</itunes:author>
+        <itunes:keywords>Criminal Justice,Crime,Prison,Reform,Police,Jail,Justice,Politics</itunes:keywords>
+        <itunes:category text="News &amp; Politics"/>
+        <itunes:category text="Society &amp; Culture">
+            <itunes:category text="Philosophy"/>
+        </itunes:category>
+        <itunes:image href="https://seekjustice.fm/art.jpg"/>
+        <itunes:explicit>clean</itunes:explicit>
+        <itunes:owner>
+            <itunes:name><![CDATA[Erik Rasmussen and Dennis Schrantz]]></itunes:name>
+            <itunes:email>seekjusticefm@gmail.com</itunes:email>
+        </itunes:owner>
+        <itunes:type>episodic</itunes:type>
+        <copyright>Copyright – Erik Rasmussen and Dennis Schrantz</copyright>
+        <item>
+            <title><![CDATA[Ep. 1 - What is Criminal Justice?]]></title>
+            <link><![CDATA[https://anchor.fm/s/28c46d0/podcast/play/2712062/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2019-2-22%2F11711811-44100-2-b79f339062d6b.mp3]]></link>
+            <guid>https://dts.podtrac.com/redirect.mp3/seekjustice.fm/media/001.mp3</guid>
+            <pubDate>Wed, 20 Mar 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[<h2>Links</h2>
+<ul>
+<li><a href="https://nypost.com/2018/09/25/a-shocking-number-of-us-murders-went-unsolved-last-year/">40% of murders in the US went unsolved in 2017</a> (NY Post)</li>
+<li><a href="https://en.wikipedia.org/wiki/Clearance_rate">Clearance Rate</a> (Wikipedia) – Measure of percentage of “solved” crimes</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Clearance_rate"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/2004_UCR_crime_clearance.jpg" alt="Clearance Rate - 2004"></a></p>
+<ul>
+<li>
+<p><a href="https://www.theguardian.com/us-news/2019/feb/20/bernie-sanders-2020-presidential-campaign-fundraising">Bernie Sanders raises $5.9M in 24 hours after announcing 2020 campaign</a></p>
+</li>
+<li>
+<p><a href="https://www.ncja.org/ncja/policy/criminal-justice-reform/national-criminal-justice-reform-project">National Criminal Justice Reform Project</a> (<a href="http://ncja.org">ncja.org</a>)</p>
+</li>
+<li>
+<p><a href="https://www.sentencingproject.org">The Sentencing Project</a> (Wikipedia)</p>
+</li>
+<li>
+<p><a href="http://www.jehtfoundation.org">JEHT Foundation</a></p>
+</li>
+<li>
+<p><a href="https://doi.org/10.1177/001112878202800302">The Unmet Promise of Alternatives to Incarceration</a>, by James Austin and Barry Krisberg (not actually Kay Harris)</p>
+</li>
+<li>
+<p><a href="https://www.philly.com/philly/obituaries/m-kay-harris-71-cofounded-the-noted-inside-out-prison-exchange-program-20181204.html">Kay Harris Obituary</a> (<a href="http://philly.com">philly.com</a>)</p>
+</li>
+<li>
+<p><a href="https://socialchangenyu.com/wp-content/uploads/legacy/Volume%2012/16_12NYURevL&amp;SocChange141(1983-1984).pdf">Stategies, Values, and the Emerging Generation of Alternatives to Incarceration</a> (PDF), by Kay Harris</p>
+</li>
+<li>
+<p><a href="https://www.sentencingproject.org/publications/reducing-racial-disparity-in-the-criminal-justice-system-a-manual-for-practitioners-and-policymakers/"><em>Reducing Racial Disparity in the Criminal Justice System: A Manual for Practitioners and Policymakers</em></a>, by Dennis Schrantz and Jerry McElroy (The Sentencing Project)</p>
+</li>
+<li>
+<p><a href="https://www.vote-nola.org">Voice of the Experienced</a> (<a href="http://vote-nola.org">vote-nola.org</a>)</p>
+</li>
+</ul>
+]]></description>
+            <content:encoded><![CDATA[<h2>Links</h2>
+<ul>
+<li><a href="https://nypost.com/2018/09/25/a-shocking-number-of-us-murders-went-unsolved-last-year/">40% of murders in the US went unsolved in 2017</a> (NY Post)</li>
+<li><a href="https://en.wikipedia.org/wiki/Clearance_rate">Clearance Rate</a> (Wikipedia) – Measure of percentage of “solved” crimes</li>
+</ul>
+<p><a href="https://en.wikipedia.org/wiki/Clearance_rate"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/2004_UCR_crime_clearance.jpg" alt="Clearance Rate - 2004"></a></p>
+<ul>
+<li>
+<p><a href="https://www.theguardian.com/us-news/2019/feb/20/bernie-sanders-2020-presidential-campaign-fundraising">Bernie Sanders raises $5.9M in 24 hours after announcing 2020 campaign</a></p>
+</li>
+<li>
+<p><a href="https://www.ncja.org/ncja/policy/criminal-justice-reform/national-criminal-justice-reform-project">National Criminal Justice Reform Project</a> (<a href="http://ncja.org">ncja.org</a>)</p>
+</li>
+<li>
+<p><a href="https://www.sentencingproject.org">The Sentencing Project</a> (Wikipedia)</p>
+</li>
+<li>
+<p><a href="http://www.jehtfoundation.org">JEHT Foundation</a></p>
+</li>
+<li>
+<p><a href="https://doi.org/10.1177/001112878202800302">The Unmet Promise of Alternatives to Incarceration</a>, by James Austin and Barry Krisberg (not actually Kay Harris)</p>
+</li>
+<li>
+<p><a href="https://www.philly.com/philly/obituaries/m-kay-harris-71-cofounded-the-noted-inside-out-prison-exchange-program-20181204.html">Kay Harris Obituary</a> (<a href="http://philly.com">philly.com</a>)</p>
+</li>
+<li>
+<p><a href="https://socialchangenyu.com/wp-content/uploads/legacy/Volume%2012/16_12NYURevL&amp;SocChange141(1983-1984).pdf">Stategies, Values, and the Emerging Generation of Alternatives to Incarceration</a> (PDF), by Kay Harris</p>
+</li>
+<li>
+<p><a href="https://www.sentencingproject.org/publications/reducing-racial-disparity-in-the-criminal-justice-system-a-manual-for-practitioners-and-policymakers/"><em>Reducing Racial Disparity in the Criminal Justice System: A Manual for Practitioners and Policymakers</em></a>, by Dennis Schrantz and Jerry McElroy (The Sentencing Project)</p>
+</li>
+<li>
+<p><a href="https://www.vote-nola.org">Voice of the Experienced</a> (<a href="http://vote-nola.org">vote-nola.org</a>)</p>
+</li>
+</ul>
+]]></content:encoded>
+            <author>seekjusticefm@gmail.com (Erik Rasmussen and Dennis Schrantz)</author>
+            <enclosure length="58552364" type="audio/mpeg" url="https://anchor.fm/s/28c46d0/podcast/play/2712062/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2019-2-22%2F11711811-44100-2-b79f339062d6b.mp3"/>
+            <itunes:duration>01:00:55</itunes:duration>
+            <itunes:explicit>no</itunes:explicit>
+            <itunes:subtitle><![CDATA[To begin, we ask, just what is the Criminal Justice "System" in the first place?]]></itunes:subtitle>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:episode>1</itunes:episode>
+        </item>
+    </channel>
+</rss>

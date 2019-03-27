@@ -82,7 +82,7 @@ export default {
       feedOptions,
       iTunesChannelFields,
     )
-    mkFile('/dist/rss.xml', feed.rss2())
+    // mkFile('/dist/rss.xml', feed.rss2())
     return {
       title: 'Seek Justice',
       description,
