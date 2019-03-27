@@ -21,11 +21,12 @@ export const links: ListenLinkProps[] = [
     href: 'http://pca.st/itunes/1457318833',
     text: 'PocketCasts',
   },
-  // {
-  //   src: 'google-play.png',
-  //   href: '',
-  //   text: 'Google Play',
-  // },
+  {
+    src: 'google-play.png',
+    href:
+      'https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&apn=com.google.android.music&link=https://play.google.com/music/m/Iuhs4m6r46e5nmvnozdwiepll54?t%3DSeek_Justice%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16',
+    text: 'Google Play',
+  },
   {
     src: 'overcast.png',
     href: 'https://overcast.fm/itunes1457318833',
