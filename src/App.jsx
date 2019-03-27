@@ -4,10 +4,10 @@ import { Grommet, Box } from 'grommet';
 const theme = {
     global: {
         colors: {
-            brand: '#cc9966',
+            brand: '#890000',
             control: {
-                light: '#cccc99',
-                dark: '#330000',
+                light: '#cc3300',
+                dark: '#660000',
             },
         },
         font: {
