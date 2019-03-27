@@ -1,6 +1,6 @@
 import React from 'react';
 import { withSiteData, withRouteData } from 'react-static';
-import { Box } from 'grommet';
+import { Box, Image } from 'grommet';
 import Header from '@src/components/Header';
 import Player from '@src/components/Player';
 import Footer from '@src/components/Footer';
@@ -21,6 +21,9 @@ export default withSiteData(withRouteData(({ content: episode, myURL, image, tit
             <Box align="center" flex gap="xsmall" pad={{ horizontal: 'medium' }}>
               <DownloadBar />
               <Player episode={episode}/>
+              {episode.frontmatter.art && (<Box elevation="large" width="300px" height="300px" flex="grow" margin={{ top: 'medium' }}>
+                  <Image src={`/${episode.frontmatter.art}`} alt="Episode Art" fit="contain"/>
+                </Box>)}
               <ShowNotes episode={episode}/>
             </Box>
           </Box>

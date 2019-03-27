@@ -34,7 +34,7 @@ export default function ShowList({ frontmatters }) {
         return (<Box>
             {frontmatters.map(fm => (<Episode key={fm.slug} href={fm.slug}>
                 <Box key={fm.slug} margin="small" direction="row-responsive" gap="medium">
-                  <EpisodeArt direction="column" justify="center" width="200px" height="200px" background={`url(${fm.art})`} align="center">
+                  <EpisodeArt direction="column" justify="center" width="200px" height="200px" background={`url('${fm.art || '/art300.jpg'}')`} align="center">
                     <CirclePlay size="xlarge" color="white"/>
                   </EpisodeArt>
                   <Box flex>

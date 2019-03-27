@@ -2,7 +2,7 @@ import React from 'react'
 
 import { withSiteData, withRouteData } from 'react-static'
 import { Episode, FMType } from '../types'
-import { Box } from 'grommet'
+import { Box, Image } from 'grommet'
 import Header from '@src/components/Header'
 import Player from '@src/components/Player'
 import Footer from '@src/components/Footer'
@@ -43,6 +43,21 @@ export default withSiteData(
             >
               <DownloadBar />
               <Player episode={episode} />
+              {episode.frontmatter.art && (
+                <Box
+                  elevation="large"
+                  width="300px"
+                  height="300px"
+                  flex="grow"
+                  margin={{ top: 'medium' }}
+                >
+                  <Image
+                    src={`/${episode.frontmatter.art}`}
+                    alt="Episode Art"
+                    fit="contain"
+                  />
+                </Box>
+              )}
               <ShowNotes episode={episode} />
             </Box>
           </Box>

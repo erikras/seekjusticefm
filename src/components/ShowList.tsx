@@ -56,7 +56,7 @@ export default function ShowList({ frontmatters }: Props) {
                     justify="center"
                     width="200px"
                     height="200px"
-                    background={`url(${fm.art})`}
+                    background={`url('${fm.art || '/art300.jpg'}')`}
                     align="center"
                   >
                     <CirclePlay size="xlarge" color="white" />
