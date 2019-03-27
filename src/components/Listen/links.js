@@ -1,47 +1,42 @@
 export const links = [
     {
         src: 'apple-podcasts.png',
-        href: '',
+        href: 'https://itunes.apple.com/us/podcast/seek-justice/id1457318833?mt=2',
         text: 'Apple Podcasts',
     },
     {
         src: 'spotify.png',
-        href: '',
+        href: 'https://open.spotify.com/show/5YMjx8eThZzMsz17Icw7Vz',
         text: 'Spotify',
     },
-    {
-        src: 'google-podcasts.png',
-        href: '',
-        text: 'Google Podcast',
-    },
+    // {
+    //   src: 'google-podcasts.png',
+    //   href: '',
+    //   text: 'Google Podcast',
+    // },
     {
         src: 'pocket-casts.png',
-        href: '',
+        href: 'http://pca.st/itunes/1457318833',
         text: 'PocketCasts',
     },
-    {
-        src: 'google-play.png',
-        href: '',
-        text: 'Google Play',
-    },
-    {
-        src: 'anchor.jpg',
-        href: '',
-        text: 'Anchor',
-    },
+    // {
+    //   src: 'google-play.png',
+    //   href: '',
+    //   text: 'Google Play',
+    // },
     {
         src: 'overcast.png',
-        href: '',
+        href: 'https://overcast.fm/itunes1457318833',
         text: 'Overcast',
     },
     {
         src: 'castro.svg',
-        href: '',
+        href: 'https://castro.fm/itunes/1457318833',
         text: 'Castro',
     },
     {
         src: 'rss.png',
-        href: '',
+        href: 'https://seekjustice.fm/rss.xml',
         text: 'RSS Feed',
     },
 ];
