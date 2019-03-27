@@ -29,7 +29,7 @@ const feedOptions = {
   feedLinks: {
     // atom: safeJoin(myURL, 'atom.xml'),
     // json: safeJoin(myURL, 'feed.json'),
-    rss: safeJoin(myURL, 'rss.xml'),
+    rss: 'https://seekjusticefm.netlify.com/rss.xml',
   },
   author,
 }
@@ -77,7 +77,7 @@ export default {
     // generate RSS
     let feed = await buildFeed(
       contents,
-      'https://seekjusticefm.netlify.com',
+      myURL,
       author,
       feedOptions,
       iTunesChannelFields,
