@@ -45,8 +45,8 @@ function Header({ siteData, content }) {
         <meta name="twitter:title" content={titleHead} />
         <meta name="twitter:description" content={desc} />
         <meta name="twitter:image" content={image} />
-        <meta name="twitter:site" content="@swyx" />
-        <meta name="twitter:creator" content="@swyx" />
+        <meta name="twitter:site" content="@seekjusticefm" />
+        <meta name="twitter:creator" content="@seekjusticefm" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
