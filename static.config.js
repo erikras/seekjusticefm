@@ -15,7 +15,7 @@ const rss = myURL + '/rss.xml'
 const contentFolder = 'content'
 const author = {
   name: 'Erik Rasmussen and Dennis Schrantz',
-  email: 'seekjustice@gmail.com',
+  email: 'seekjusticefm@gmail.com',
   link: 'https://seekjustice.fm',
 }
 const feedOptions = {
