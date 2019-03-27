@@ -52,7 +52,7 @@ const iTunesChannelFields = {
     { cat: 'Society & Culture', child: 'Philosophy' },
   ],
   image,
-  explicit: true,
+  explicit: false,
   owner: author,
   type: 'episodic',
 }
