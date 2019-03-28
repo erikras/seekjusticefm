@@ -2,7 +2,7 @@ import React from 'react'
 
 import { withSiteData, withRouteData } from 'react-static'
 import { Episode, FMType } from '../types'
-import { Box, Image } from 'grommet'
+import { Anchor, Box, Image, Paragraph } from 'grommet'
 import Header from '@src/components/Header'
 import Player from '@src/components/Player'
 import Footer from '@src/components/Footer'
@@ -59,6 +59,28 @@ export default withSiteData(
                 </Box>
               )}
               <ShowNotes episode={episode} />
+              <hr />
+              <Paragraph
+                style={{ maxWidth: '100%', width: '100%' }}
+                alignSelf="center"
+                textAlign="center"
+              >
+                Our theme music is{' '}
+                <Anchor
+                  href="https://www.incompetech.com/music/royalty-free/index.html?isrc=USUAN1600039"
+                  target="_blank"
+                >
+                  District Four
+                </Anchor>
+                , by Kevin MacLeod (incompetech.com)
+                <br /> Licensed under{' '}
+                <Anchor
+                  href="http://creativecommons.org/licenses/by/3.0/"
+                  target="_blank"
+                >
+                  Creative Commons: By Attribution 3.0 License
+                </Anchor>
+              </Paragraph>
             </Box>
           </Box>
           <Footer />

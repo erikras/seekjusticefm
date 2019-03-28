@@ -30,7 +30,7 @@ function Footer() {
         <Anchor
           margin="medium"
           icon={<Facebook />}
-          href="https://www.facebook.com/seekjusticefm"
+          href="https://www.facebook.com/Seek-Justice-Podcast-328689404657995/"
           label="Facebook"
         />
         <Anchor

@@ -8,8 +8,8 @@ import { buildFeed, grabContents } from 'podcats'
 const myURL = 'https://seekjustice.fm'
 
 const description =
-  'a weekly deep dive into Criminal Justice with Dennis Schrantz'
-const image = 'https://seekjustice.fm/art.jpg' // TODO: itunes cover and opengraph image. you should customise this!
+  'A weekly deep dive into Criminal Justice with Erik Rasmussen and Dennis Schrantz'
+const image = 'https://seekjustice.fm/art.jpg'
 const ghURL = 'https://github.com/erikras/seekjustice'
 const rss = myURL + '/rss.xml'
 const contentFolder = 'content'
