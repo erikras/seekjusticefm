@@ -11,6 +11,11 @@ export const links: ListenLinkProps[] = [
     href: 'https://open.spotify.com/show/5YMjx8eThZzMsz17Icw7Vz',
     text: 'Spotify',
   },
+  {
+    src: 'overcast.png',
+    href: 'https://overcast.fm/itunes1457318833',
+    text: 'Overcast',
+  },
   // {
   //   src: 'google-podcasts.png',
   //   href: '',
@@ -28,9 +33,9 @@ export const links: ListenLinkProps[] = [
     text: 'Google Play',
   },
   {
-    src: 'overcast.png',
-    href: 'https://overcast.fm/itunes1457318833',
-    text: 'Overcast',
+    src: 'radiopublic.png',
+    href: 'https://radiopublic.com/seek-justice-6Bpv2x',
+    text: 'RadioPublic',
   },
   {
     src: 'castro.svg',
