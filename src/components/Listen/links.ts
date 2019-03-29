@@ -48,6 +48,12 @@ export const links: ListenLinkProps[] = [
     text: 'Castro',
   },
   {
+    src: 'podbean.png',
+    href:
+      'https://www.podbean.com/podcast-detail/6svpt-8ae4b/Seek-Justice-Podcast',
+    text: 'PodBean',
+  },
+  {
     src: 'rss.png',
     href: 'https://seekjustice.fm/rss.xml',
     text: 'RSS Feed',
