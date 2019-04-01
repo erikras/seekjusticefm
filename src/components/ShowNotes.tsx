@@ -25,4 +25,7 @@ const Container = styled(Box)`
     padding-left: 20px;
     border-left: 1px solid #ccc;
   }
+  li {
+    margin: 10px 0;
+  }
 `
