@@ -43,6 +43,12 @@ export const links: ListenLinkProps[] = [
     text: 'Castbox',
   },
   {
+    src: 'tunein.svg',
+    href:
+      'https://tunein.com/podcasts/News--Politics-Podcasts/Seek-Justice-p1214873/',
+    text: 'TuneIn',
+  },
+  {
     src: 'castro.svg',
     href: 'https://castro.fm/itunes/1457318833',
     text: 'Castro',
