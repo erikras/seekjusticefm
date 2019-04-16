@@ -2,6 +2,7 @@ import React from 'react'
 import { withSiteData } from 'react-static'
 import { Episode, FMType } from '../types'
 import { Box } from 'grommet'
+import Page from '@src/Page'
 import Header from '@src/components/Header'
 import Listen from '@src/components/Listen'
 import Footer from '@src/components/Footer'
@@ -18,6 +19,7 @@ type Props = {
 export default withSiteData(
   ({ frontmatters, title, description, myURL, image }: Props) => {
     return (
+      <Page>
       <Box gap="medium">
         <Header
           siteData={{
@@ -37,6 +39,7 @@ export default withSiteData(
         </Box>
         <Footer />
       </Box>
+      </Page>
     )
   },
 )
