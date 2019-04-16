@@ -3,9 +3,14 @@ import styled from 'styled-components'
 import { Episode } from '../types'
 import AudioCard from 'audiocard'
 
-type Props = { episode: Episode; image?: string; linkToShowNotes?: boolean }
+type Props = {
+  episode: Episode
+  image?: string
+  linkToShowNotes?: boolean
+  autoPlay?: boolean
+}
 
-const Player = ({ episode, image, linkToShowNotes }: Props) => {
+const Player = ({ episode, image, linkToShowNotes, autoPlay }: Props) => {
   return (
     <Container>
       <AudioCard
@@ -17,11 +22,12 @@ const Player = ({ episode, image, linkToShowNotes }: Props) => {
         source={`https://dts.podtrac.com/redirect.mp3/seekjustice.fm/media/${
           episode.frontmatter.slug
         }.mp3`}
+        autoPlay={autoPlay}
         preload="none"
-        skipBackSeconds={10}
-        skipForwardSeconds={30}
         link={linkToShowNotes ? `/${episode.frontmatter.slug}` : undefined}
         linkText={linkToShowNotes ? 'Show Notes' : undefined}
+        skipBackSeconds={10}
+        skipForwardSeconds={30}
       />
     </Container>
   )
@@ -32,9 +38,6 @@ const Container = styled.div`
   & > div {
     display: flex;
     flex-flow: row;
-    & > .cassette {
-      flex: 1;
-    }
   }
 `
 export default Player
