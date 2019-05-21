@@ -54,6 +54,11 @@ export const links: ListenLinkProps[] = [
     text: 'Castro',
   },
   {
+    src: 'podcast-addict.png',
+    href: 'http://podplayer.net/?podId=2375793',
+    text: 'Podcast Addict',
+  },
+  {
     src: 'podbean.png',
     href:
       'https://www.podbean.com/podcast-detail/6svpt-8ae4b/Seek-Justice-Podcast',
