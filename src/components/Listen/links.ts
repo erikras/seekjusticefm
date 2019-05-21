@@ -38,6 +38,11 @@ export const links: ListenLinkProps[] = [
     text: 'RadioPublic',
   },
   {
+    src: 'podcast-republic.png',
+    href: 'https://podcastrepublic.net/podcast/1457318833',
+    text: 'Podcast Republic',
+  },
+  {
     src: 'castbox.png',
     href: 'https://castbox.fm/ch/2068663',
     text: 'Castbox',
