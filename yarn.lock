@@ -5998,10 +5998,10 @@ pkg-up@2.0.0:
   dependencies:
     find-up "^2.1.0"
 
-podcats@^0.1.10:
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/podcats/-/podcats-0.1.10.tgz#482d5ebb63b3e4301f156f88667e54e313dfaeba"
-  integrity sha512-JCGNi36zcyvRJii/5QDnjiPOt5lqbvbcc1Yc4NWbi6hUrJulO5UCa/Wp2bB4EkxLkAMbM633OdVT+D/zpJ0juw==
+podcats@^0.1.13:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/podcats/-/podcats-0.1.13.tgz#f88e821064046105ac66a5cc28426e01a1150296"
+  integrity sha512-mwQs61UTBEj5MzaNtdqW2K1w266Zhixy+dwg7qFiav+2MIFDTBWW4wHoX0mAFPdDTDG35uglyVtGzzzv1E/V1Q==
 
 polished@^2.2.0:
   version "2.3.3"

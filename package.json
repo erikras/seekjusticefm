@@ -24,7 +24,7 @@
     "grommet-icons": "^4.2.0",
     "lodash": "^4.17.11",
     "markdown-it": "^8.4.2",
-    "podcats": "^0.1.10",
+    "podcats": "^0.1.13",
     "qs": "^6.6.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
