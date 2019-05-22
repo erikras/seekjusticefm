@@ -8,7 +8,7 @@ import { buildFeed, grabContents } from 'podcats'
 export const decorateURL = url =>
   `https://${['dts.podtrac.com/redirect.mp3/', 'chtbl.com/track/9DG54/'].reduce(
     (result, prefix) => `${prefix}${result}`,
-    url.substring(8),
+    url.substring(8), // remove https://
   )}`
 
 /// config
