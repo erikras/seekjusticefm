@@ -1,6 +1,6 @@
 import React from 'react'
 import { Anchor, Box, Heading, Paragraph } from 'grommet'
-import { Twitter, Facebook, Mail } from 'grommet-icons'
+import { Twitter, Facebook, Mail, Youtube } from 'grommet-icons'
 import styled from 'styled-components'
 
 export default styled(Footer)`
@@ -32,6 +32,12 @@ function Footer() {
           icon={<Facebook />}
           href="https://www.facebook.com/Seek-Justice-Podcast-328689404657995/"
           label="Facebook"
+        />
+        <Anchor
+          margin="medium"
+          icon={<Youtube />}
+          href="https://www.youtube.com/channel/UCSA6n805m_RP2BQiTvZcbxA/videos"
+          label="YouTube"
         />
         <Anchor
           margin="medium"
