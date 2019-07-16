@@ -28,4 +28,14 @@ const Container = styled(Box)`
   li {
     margin: 10px 0;
   }
+  table {
+    border-collapse: collapse;
+    margin: 10px auto;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
+    td,
+    th {
+      padding: 5px 10px;
+      border: 1px solid #999;
+    }
+  }
 `
