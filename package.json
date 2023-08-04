@@ -21,7 +21,7 @@
     "front-matter": "^3.0.1",
     "grommet": "^2.7.0",
     "grommet-icons": "^4.2.0",
-    "markdown-it": "^8.4.2",
+    "markdown-it": "^12.3.2",
     "podcats": "^0.1.13",
     "qs": "^6.6.0",
     "react-helmet": "^5.2.0",
