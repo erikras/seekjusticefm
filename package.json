@@ -23,7 +23,7 @@
     "grommet-icons": "^4.2.0",
     "markdown-it": "^8.4.2",
     "podcats": "^0.1.13",
-    "qs": "^6.6.0",
+    "qs": "^6.7.3",
     "react-helmet": "^5.2.0",
     "react-hot-loader": "^4.8.7",
     "react-static": "^6.0.18",
