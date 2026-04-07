@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans), sans-serif;
+  }
+
+  body {
+    @apply min-h-screen bg-paper text-ink antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(185, 133, 82, 0.17), transparent 32%),
+      radial-gradient(circle at 85% 18%, rgba(75, 45, 31, 0.08), transparent 24%),
+      linear-gradient(180deg, #fffaf3 0%, #f6efe5 48%, #f2eadf 100%);
+  }
+
+  * {
+    @apply border-line;
+  }
+
+  ::selection {
+    background: rgba(185, 133, 82, 0.25);
+  }
+
+  a {
+    @apply outline-none;
+  }
+}
+
+@layer components {
+  .page-shell {
+    @apply mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-8 px-4 py-6 sm:px-6 sm:py-8 lg:px-8;
+  }
+
+  .content-grid {
+    @apply grid grid-cols-1 gap-8 lg:grid-cols-[320px_minmax(0,1fr)];
+  }
+}

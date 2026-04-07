@@ -1,0 +1,98 @@
+{
+  "media/001.mp3": {
+    "sizeBytes": 58465010,
+    "durationSeconds": 3650
+  },
+  "media/002.mp3": {
+    "sizeBytes": 48579022,
+    "durationSeconds": 3032
+  },
+  "media/003.mp3": {
+    "sizeBytes": 42596772,
+    "durationSeconds": 2658
+  },
+  "media/004.mp3": {
+    "sizeBytes": 50087437,
+    "durationSeconds": 3126
+  },
+  "media/005.mp3": {
+    "sizeBytes": 40656188,
+    "durationSeconds": 2537
+  },
+  "media/006.mp3": {
+    "sizeBytes": 39271907,
+    "durationSeconds": 2450
+  },
+  "media/007.mp3": {
+    "sizeBytes": 43408031,
+    "durationSeconds": 2709
+  },
+  "media/008.mp3": {
+    "sizeBytes": 40054326,
+    "durationSeconds": 2499
+  },
+  "media/009.mp3": {
+    "sizeBytes": 39844511,
+    "durationSeconds": 2486
+  },
+  "media/010.mp3": {
+    "sizeBytes": 34852406,
+    "durationSeconds": 2174
+  },
+  "media/011.mp3": {
+    "sizeBytes": 45502006,
+    "durationSeconds": 2840
+  },
+  "media/012.mp3": {
+    "sizeBytes": 42474310,
+    "durationSeconds": 2651
+  },
+  "media/013.mp3": {
+    "sizeBytes": 50395055,
+    "durationSeconds": 3146
+  },
+  "media/014.mp3": {
+    "sizeBytes": 47350640,
+    "durationSeconds": 2955
+  },
+  "media/015.mp3": {
+    "sizeBytes": 42772733,
+    "durationSeconds": 2669
+  },
+  "media/016.mp3": {
+    "sizeBytes": 48674735,
+    "durationSeconds": 3038
+  },
+  "media/017.mp3": {
+    "sizeBytes": 43515864,
+    "durationSeconds": 2716
+  },
+  "media/018.mp3": {
+    "sizeBytes": 46058728,
+    "durationSeconds": 2875
+  },
+  "media/019.mp3": {
+    "sizeBytes": 46709908,
+    "durationSeconds": 2915
+  },
+  "media/020.mp3": {
+    "sizeBytes": 34399339,
+    "durationSeconds": 2146
+  },
+  "media/021.mp3": {
+    "sizeBytes": 31537154,
+    "durationSeconds": 1967
+  },
+  "media/022.mp3": {
+    "sizeBytes": 41594924,
+    "durationSeconds": 2596
+  },
+  "media/023.mp3": {
+    "sizeBytes": 28156700,
+    "durationSeconds": 1756
+  },
+  "media/024.mp3": {
+    "sizeBytes": 59841350,
+    "durationSeconds": 3736
+  }
+}
