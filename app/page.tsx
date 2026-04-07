@@ -1,4 +1,4 @@
-import EpisodeList from '@/components/EpisodeList';
+import EpisodeListWithSearch from '@/components/EpisodeListWithSearch';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Listen from '@/components/Listen';
@@ -30,7 +30,7 @@ export default async function HomePage() {
             </p>
           </div>
 
-          <EpisodeList episodes={episodes} />
+          <EpisodeListWithSearch episodes={episodes} />
         </section>
       </div>
 
