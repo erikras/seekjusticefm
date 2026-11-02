@@ -1,14 +1,36 @@
+import type { Metadata } from 'next';
 import EpisodeListWithSearch from '@/components/EpisodeListWithSearch';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import JsonLd from '@/components/JsonLd';
 import Listen from '@/components/Listen';
 import { getEpisodes } from '@/lib/episodes';
+import { feedAlternateTypes, url } from '@/util/constants';
+import { defaultOpenGraph } from '@/util/metadata';
+import { podcastSeriesJsonLd } from '@/util/structuredData';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: url,
+    types: feedAlternateTypes,
+  },
+  openGraph: {
+    ...defaultOpenGraph,
+    url,
+  },
+};
 
 export default async function HomePage() {
   const { episodes } = await getEpisodes();
+  // Only pass frontmatter to the client-side search list. Passing whole
+  // episodes serialized every show-notes body and absolute build path
+  // (e.g. /home/runner/.../content/024.md) into the page, which crawlers
+  // picked up as links and reported as 404s.
+  const episodeSummaries = episodes.map(({ frontmatter }) => ({ frontmatter }));
 
   return (
     <main className="page-shell">
+      <JsonLd data={podcastSeriesJsonLd()} />
       <Header />
 
       <div className="content-grid">
@@ -30,7 +52,7 @@ export default async function HomePage() {
             </p>
           </div>
 
-          <EpisodeListWithSearch episodes={episodes} />
+          <EpisodeListWithSearch episodes={episodeSummaries} />
         </section>
       </div>
 

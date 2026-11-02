@@ -2,6 +2,9 @@ import contents, { type Episode } from '../util/content';
 
 export type { Episode } from '../util/content';
 
+/** The subset of an episode that is safe and cheap to send to the client. */
+export type EpisodeSummary = Pick<Episode, 'frontmatter'>;
+
 export async function getEpisodes(): Promise<{
   episodes: Episode[];
   totalEpisodes: number;

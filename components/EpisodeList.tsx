@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import type { Episode } from '../lib/episodes';
+import type { EpisodeSummary } from '../lib/episodes';
 import { formatDisplayDate } from '../util/formatDate';
 
 interface EpisodeListProps {
-  episodes: Episode[];
+  episodes: EpisodeSummary[];
 }
 
 export default function EpisodeList({ episodes }: EpisodeListProps) {

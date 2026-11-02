@@ -26,6 +26,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      # public/media/* is stored in Git LFS. Without this, show-note images and
+      # PDFs deploy as LFS pointer files. MP3s are skipped: they are served from
+      # R2 (see public/_redirects) and would burn LFS bandwidth.
+      - name: Fetch show-note media from Git LFS
+        run: git lfs pull --include="public/media/*" --exclude="public/media/*.mp3"
+
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
         with:

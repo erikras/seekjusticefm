@@ -1,12 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import type { Episode } from '../lib/episodes';
+import type { EpisodeSummary } from '../lib/episodes';
 import EpisodeList from './EpisodeList';
 import SearchBox from './SearchBox';
 
 interface EpisodeListWithSearchProps {
-  episodes: Episode[];
+  episodes: EpisodeSummary[];
 }
 
 export default function EpisodeListWithSearch({

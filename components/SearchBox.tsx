@@ -1,12 +1,12 @@
 'use client';
 
 import { useDeferredValue, useEffect, useMemo, useState } from 'react';
-import type { Episode } from '../lib/episodes';
+import type { EpisodeSummary } from '../lib/episodes';
 import { filterEpisodes } from '../util/filterEpisodes';
 
 interface SearchBoxProps {
-  episodes: Episode[];
-  onFilteredEpisodes: (episodes: Episode[]) => void;
+  episodes: EpisodeSummary[];
+  onFilteredEpisodes: (episodes: EpisodeSummary[]) => void;
 }
 
 export default function SearchBox({

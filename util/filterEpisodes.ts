@@ -1,6 +1,9 @@
-import type { Episode } from '../lib/episodes';
+import type { EpisodeSummary } from '../lib/episodes';
 
-export function filterEpisodes(episodes: Episode[], searchTerm: string): Episode[] {
+export function filterEpisodes<T extends EpisodeSummary>(
+  episodes: T[],
+  searchTerm: string
+): T[] {
   const normalizedTerm = searchTerm.trim().toLowerCase();
 
   if (!normalizedTerm) {
