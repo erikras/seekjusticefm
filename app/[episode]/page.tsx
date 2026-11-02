@@ -13,8 +13,16 @@ import {
   getNextEpisode,
   getPreviousEpisode,
 } from '@/lib/episodes';
-import { defaultImage, shareHandle, title, url } from '@/util/constants';
+import JsonLd from '@/components/JsonLd';
+import {
+  defaultImage,
+  feedAlternateTypes,
+  shareHandle,
+  title,
+  url,
+} from '@/util/constants';
 import { prefixMp3 } from '@/util/prefixMp3';
+import { podcastEpisodeJsonLd } from '@/util/structuredData';
 
 interface EpisodePageProps {
   params: Promise<{ episode: string }>;
@@ -52,6 +60,7 @@ export async function generateMetadata({
     description: ep.frontmatter.description,
     alternates: {
       canonical: pageUrl,
+      types: feedAlternateTypes,
     },
     openGraph: {
       title: ep.frontmatter.title,
@@ -59,11 +68,12 @@ export async function generateMetadata({
       url: pageUrl,
       siteName: title,
       type: 'article',
+      publishedTime: ep.frontmatter.date,
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 1200,
+          // Only the default cover art has known dimensions (3000x3000).
+          ...(ep.frontmatter.art ? {} : { width: 3000, height: 3000 }),
           alt: ep.frontmatter.title,
         },
       ],
@@ -102,6 +112,7 @@ export default async function EpisodePage({ params }: EpisodePageProps) {
 
   return (
     <main className="page-shell">
+      <JsonLd data={podcastEpisodeJsonLd(ep)} />
       <Header episode={ep} />
 
       <div className="content-grid">
@@ -117,9 +128,9 @@ export default async function EpisodePage({ params }: EpisodePageProps) {
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-dark/65">
                 Episode {ep.frontmatter.episode}
               </p>
-              <h2 className="font-serif text-4xl leading-tight text-ink">
+              <h1 className="font-serif text-4xl leading-tight text-ink">
                 {ep.frontmatter.title}
-              </h2>
+              </h1>
               <p className="max-w-4xl text-lg leading-8 text-ink/72">
                 {ep.frontmatter.description}
               </p>

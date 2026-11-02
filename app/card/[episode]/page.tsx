@@ -33,8 +33,18 @@ export async function generateMetadata({
     : defaultImage;
 
   return {
-    title: ep.frontmatter.title,
+    title: `${ep.frontmatter.title} (Player)`,
     description: ep.frontmatter.description,
+    // This is the embeddable Twitter player; the episode page is the
+    // indexable version. Not disallowed in robots.txt because Twitterbot
+    // must still be able to fetch it.
+    robots: {
+      index: false,
+      follow: true,
+    },
+    alternates: {
+      canonical: `${url}/${ep.frontmatter.slug}`,
+    },
     openGraph: {
       title: ep.frontmatter.title,
       description: ep.frontmatter.description,
