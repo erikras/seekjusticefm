@@ -1,12 +1,12 @@
 'use client';
 
 import { useDeferredValue, useEffect, useMemo, useState } from 'react';
-import type { Episode } from '../lib/episodes';
+import type { EpisodeSummary } from '../lib/episodes';
 import { filterEpisodes } from '../util/filterEpisodes';
 
 interface SearchBoxProps {
-  episodes: Episode[];
-  onFilteredEpisodes: (episodes: Episode[]) => void;
+  episodes: EpisodeSummary[];
+  onFilteredEpisodes: (episodes: EpisodeSummary[]) => void;
 }
 
 export default function SearchBox({
@@ -38,7 +38,12 @@ export default function SearchBox({
 
       <div className="relative mt-3">
         <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-brand-dark/45">
-          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -64,7 +69,12 @@ export default function SearchBox({
             className="absolute inset-y-0 right-0 flex items-center pr-4 text-brand-dark/45 transition-colors duration-150 hover:text-brand-dark"
             aria-label="Clear search"
           >
-            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"

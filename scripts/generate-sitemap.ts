@@ -1,24 +1,9 @@
 import fs from 'node:fs';
-import contents from '../util/content';
 import { url } from '../util/constants';
+import contents from '../util/content';
+import { buildSitemapXml } from '../util/sitemap';
 
-;(async () => {
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>${url}</loc>
-    <priority>0.5</priority>
-  </url>
-${contents
-  .map(
-    (episode) => `  <url>
-    <loc>${url}/${episode.frontmatter.slug}</loc>
-    <priority>0.5</priority>
-  </url>`
-  )
-  .join('\n')}
-</urlset>
-`;
+const sitemap = buildSitemapXml(url, contents);
 
-  fs.writeFileSync('public/sitemap.xml', sitemap);
-})();
+fs.writeFileSync('public/sitemap.xml', sitemap);
+console.log(`Sitemap written with ${contents.length + 1} URLs`);

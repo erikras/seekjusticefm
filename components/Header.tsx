@@ -1,11 +1,6 @@
 import Link from 'next/link';
 import type { Episode } from '../lib/episodes';
-import {
-  description,
-  shareHandle,
-  title,
-  url,
-} from '../util/constants';
+import { description, shareHandle, title, url } from '../util/constants';
 import Share from './Share';
 
 interface HeaderProps {
@@ -18,6 +13,8 @@ export default function Header({ episode }: HeaderProps) {
     ? episode.frontmatter.description
     : description;
   const shareUrl = episode ? `${url}/${episode.frontmatter.slug}` : url;
+  // Episode pages use the episode title as their single h1.
+  const SiteTitle = episode ? 'p' : 'h1';
 
   return (
     <header className="rounded-[2.5rem] border border-line/70 bg-[linear-gradient(135deg,rgba(255,250,243,0.96),rgba(242,234,223,0.85))] p-6 shadow-[0_28px_70px_rgba(31,37,40,0.09)] sm:p-8 lg:p-10">
@@ -41,11 +38,14 @@ export default function Header({ episode }: HeaderProps) {
             Criminal Justice Podcast
           </p>
           <div className="space-y-3">
-            <h1 className="font-serif text-4xl leading-tight text-ink sm:text-5xl">
-              <Link href="/" className="transition-colors duration-150 hover:text-brand-dark">
+            <SiteTitle className="font-serif text-4xl leading-tight text-ink sm:text-5xl">
+              <Link
+                href="/"
+                className="transition-colors duration-150 hover:text-brand-dark"
+              >
                 {title}
               </Link>
-            </h1>
+            </SiteTitle>
             <p className="mx-auto max-w-3xl text-lg leading-8 text-ink/72 lg:mx-0">
               {description}
             </p>
