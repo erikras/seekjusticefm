@@ -1,8 +1,18 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import { Source_Sans_3, Source_Serif_4 } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
-import { defaultImage, description, gtmId, title, url } from '../util/constants';
+import {
+  defaultImage,
+  feedAlternateTypes,
+  gtmId,
+  homeDescription,
+  homeTitle,
+  shareHandle,
+  title,
+  url,
+} from '../util/constants';
+import { defaultOpenGraph } from '../util/metadata';
 
 const sans = Source_Sans_3({
   subsets: ['latin'],
@@ -14,34 +24,25 @@ const serif = Source_Serif_4({
   variable: '--font-serif',
 });
 
+// Canonical URLs are set on each indexable page. A layout-level canonical
+// would mark the 404 and player embeds as duplicates of the homepage.
 export const metadata: Metadata = {
-  title,
-  description,
+  title: {
+    default: homeTitle,
+    template: `%s | ${title}`,
+  },
+  description: homeDescription,
   metadataBase: new URL(url),
   alternates: {
-    canonical: url,
+    types: feedAlternateTypes,
   },
-  openGraph: {
-    title,
-    description,
-    url,
-    siteName: title,
-    type: 'website',
-    images: [
-      {
-        url: defaultImage,
-        width: 3000,
-        height: 3000,
-        alt: title,
-      },
-    ],
-  },
+  openGraph: defaultOpenGraph,
   twitter: {
     card: 'summary_large_image',
-    title,
-    description,
-    creator: '@seekjusticefm',
-    site: '@seekjusticefm',
+    title: homeTitle,
+    description: homeDescription,
+    creator: `@${shareHandle}`,
+    site: `@${shareHandle}`,
     images: [defaultImage],
   },
   icons: {

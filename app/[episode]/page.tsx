@@ -5,6 +5,7 @@ import DownloadBar from '@/components/DownloadBar';
 import EpisodeNavigation from '@/components/EpisodeNavigation';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import JsonLd from '@/components/JsonLd';
 import Listen from '@/components/Listen';
 import ShowNotes from '@/components/ShowNotes';
 import {
@@ -13,8 +14,15 @@ import {
   getNextEpisode,
   getPreviousEpisode,
 } from '@/lib/episodes';
-import { defaultImage, shareHandle, title, url } from '@/util/constants';
+import {
+  defaultImage,
+  feedAlternateTypes,
+  shareHandle,
+  title,
+  url,
+} from '@/util/constants';
 import { prefixMp3 } from '@/util/prefixMp3';
+import { podcastEpisodeJsonLd } from '@/util/structuredData';
 
 interface EpisodePageProps {
   params: Promise<{ episode: string }>;
@@ -44,14 +52,18 @@ export async function generateMetadata({
   const playerUrl = `${url}/card/${ep.frontmatter.slug}`;
   const audioUrl = prefixMp3(`${ep.frontmatter.slug}.mp3`);
   const imageUrl = ep.frontmatter.art
-    ? `${url}/${ep.frontmatter.art}`
+    ? `${url}/${ep.frontmatter.art.replace(/^\//, '')}`
     : defaultImage;
+  const imageAlt = ep.frontmatter.art
+    ? `Cover art for ${ep.frontmatter.title}`
+    : 'Seek Justice cover art';
 
   return {
     title: ep.frontmatter.title,
     description: ep.frontmatter.description,
     alternates: {
       canonical: pageUrl,
+      types: feedAlternateTypes,
     },
     openGraph: {
       title: ep.frontmatter.title,
@@ -59,12 +71,13 @@ export async function generateMetadata({
       url: pageUrl,
       siteName: title,
       type: 'article',
+      publishedTime: ep.frontmatter.date,
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 1200,
-          alt: ep.frontmatter.title,
+          alt: imageAlt,
+          // Only the default cover has known dimensions.
+          ...(ep.frontmatter.art ? {} : { width: 3000, height: 3000 }),
         },
       ],
     },
@@ -82,7 +95,7 @@ export async function generateMetadata({
       'twitter:player:height': '240',
       'twitter:player:stream': audioUrl,
       'twitter:player:stream:content_type': 'audio/mpeg',
-      'twitter:image:alt': `Cover art for ${ep.frontmatter.title}`,
+      'twitter:image:alt': imageAlt,
     },
   };
 }
@@ -102,6 +115,7 @@ export default async function EpisodePage({ params }: EpisodePageProps) {
 
   return (
     <main className="page-shell">
+      <JsonLd data={podcastEpisodeJsonLd(ep)} />
       <Header episode={ep} />
 
       <div className="content-grid">
@@ -117,9 +131,9 @@ export default async function EpisodePage({ params }: EpisodePageProps) {
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-brand-dark/65">
                 Episode {ep.frontmatter.episode}
               </p>
-              <h2 className="font-serif text-4xl leading-tight text-ink">
+              <h1 className="font-serif text-4xl leading-tight text-ink">
                 {ep.frontmatter.title}
-              </h2>
+              </h1>
               <p className="max-w-4xl text-lg leading-8 text-ink/72">
                 {ep.frontmatter.description}
               </p>
@@ -132,8 +146,8 @@ export default async function EpisodePage({ params }: EpisodePageProps) {
             {ep.frontmatter.art ? (
               <figure className="mb-8 mt-8 overflow-hidden rounded-[1.8rem] border border-line/70 bg-paper shadow-[0_16px_40px_rgba(31,37,40,0.08)]">
                 <img
-                  src={`/${ep.frontmatter.art}`}
-                  alt={ep.frontmatter.title}
+                  src={`/${ep.frontmatter.art.replace(/^\//, '')}`}
+                  alt={`Cover art for ${ep.frontmatter.title}`}
                   className="h-auto w-full object-cover"
                 />
               </figure>

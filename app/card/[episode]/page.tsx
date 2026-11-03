@@ -2,7 +2,13 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import AudioCardComponent from '@/components/AudioCard';
 import { getAllEpisodeSlugs, getEpisode } from '@/lib/episodes';
-import { defaultImage, shareHandle, title, url } from '@/util/constants';
+import {
+  defaultImage,
+  feedAlternateTypes,
+  shareHandle,
+  title,
+  url,
+} from '@/util/constants';
 
 interface CardPageProps {
   params: Promise<{ episode: string }>;
@@ -28,24 +34,45 @@ export async function generateMetadata({
     };
   }
 
+  const pageUrl = `${url}/${ep.frontmatter.slug}`;
   const imageUrl = ep.frontmatter.art
-    ? `${url}/${ep.frontmatter.art}`
+    ? `${url}/${ep.frontmatter.art.replace(/^\//, '')}`
     : defaultImage;
+  const playerTitle = `${ep.frontmatter.title} (Player)`;
+  const playerDescription = `Embedded audio player. ${ep.frontmatter.description}`;
 
   return {
-    title: ep.frontmatter.title,
-    description: ep.frontmatter.description,
+    title: playerTitle,
+    description: playerDescription,
+    // The episode page is the indexable URL. This embed stays fetchable for
+    // Twitter's player card, so it is noindex rather than blocked in robots.txt.
+    robots: {
+      index: false,
+      follow: true,
+    },
+    alternates: {
+      canonical: pageUrl,
+      types: feedAlternateTypes,
+    },
     openGraph: {
-      title: ep.frontmatter.title,
-      description: ep.frontmatter.description,
+      title: playerTitle,
+      description: playerDescription,
+      url: pageUrl,
       siteName: title,
-      type: 'article',
-      images: [imageUrl],
+      type: 'website',
+      images: [
+        {
+          url: imageUrl,
+          alt: ep.frontmatter.art
+            ? `Cover art for ${ep.frontmatter.title}`
+            : 'Seek Justice cover art',
+        },
+      ],
     },
     twitter: {
-      card: 'player',
-      title: ep.frontmatter.title,
-      description: ep.frontmatter.description,
+      card: 'summary_large_image',
+      title: playerTitle,
+      description: playerDescription,
       creator: `@${shareHandle}`,
       site: `@${shareHandle}`,
       images: [imageUrl],
@@ -62,7 +89,7 @@ export default async function CardPage({ params }: CardPageProps) {
   }
 
   const imageUrl = ep.frontmatter.art
-    ? `${url}/${ep.frontmatter.art}`
+    ? `${url}/${ep.frontmatter.art.replace(/^\//, '')}`
     : `${url}/art300.jpg`;
 
   return (

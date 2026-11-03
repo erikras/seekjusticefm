@@ -2,6 +2,9 @@ import contents, { type Episode } from '../util/content';
 
 export type { Episode } from '../util/content';
 
+/** Fields that are safe to send to the client archive search. */
+export type EpisodeSummary = Pick<Episode, 'frontmatter'>;
+
 export async function getEpisodes(): Promise<{
   episodes: Episode[];
   totalEpisodes: number;
@@ -20,7 +23,9 @@ export async function getAllEpisodeSlugs(): Promise<string[]> {
   return contents.map((episode) => episode.frontmatter.slug);
 }
 
-export async function getNextEpisode(currentSlug: string): Promise<Episode | null> {
+export async function getNextEpisode(
+  currentSlug: string
+): Promise<Episode | null> {
   const currentIndex = contents.findIndex(
     (episode) => episode.frontmatter.slug === currentSlug
   );
